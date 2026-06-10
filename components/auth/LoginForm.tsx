@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { useLocale, useTranslations } from 'next-intl'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -26,7 +26,6 @@ interface LoginFormProps {
 
 export function LoginForm({ title, subtitle }: LoginFormProps) {
   const t = useTranslations('auth')
-  const locale = useLocale()
   const router = useRouter()
   const [serverError, setServerError] = useState<string | null>(null)
 
@@ -47,7 +46,7 @@ export function LoginForm({ title, subtitle }: LoginFormProps) {
       setServerError(error.message)
       return
     }
-    router.push(`/${locale}/dashboard`)
+    router.push('/dashboard')
     router.refresh()
   }
 
@@ -101,7 +100,7 @@ export function LoginForm({ title, subtitle }: LoginFormProps) {
           </Button>
           <p className="text-sm text-muted-foreground text-center">
             {t('noAccount')}{' '}
-            <Link href={`/${locale}/register`} className="text-primary hover:underline font-medium">
+            <Link href="/register" className="text-primary hover:underline font-medium">
               {t('register')}
             </Link>
           </p>

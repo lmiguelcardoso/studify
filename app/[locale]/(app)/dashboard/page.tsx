@@ -7,10 +7,10 @@ export default async function DashboardPage() {
   const { data: { user } } = await supabase.auth.getUser()
 
   return (
-    <main className="flex-1 p-6">
+    <div className="p-6 max-w-screen-xl mx-auto">
       <h1 className="text-2xl font-semibold">
         {t('welcome')}, {user?.email}
       </h1>
-    </main>
+    </div>
   )
 }
