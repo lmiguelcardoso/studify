@@ -12,11 +12,4 @@ The developer runs installs manually in their environment.
 
 ## Git Identity
 
-Commits must be attributed to the personal GitHub account. The local git config is already set:
-
-```
-user.name  = Miguel
-user.email = 94724021+lmiguelcardoso@users.noreply.github.com
-```
-
-Never modify the global git config. Always use `--local` if any git config change is needed.
+Commits must be attributed to the personal GitHub account (`lmiguelcardoso`). The local git config is already set — never modify the global git config.
