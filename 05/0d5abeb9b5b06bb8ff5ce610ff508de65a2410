@@ -1,0 +1,35 @@
+app/[locale]/(app)/layout.tsx
+  s_ee3185a6d42b9d::t_09ef89ac69c76c 4,17-22
+components/layout/SyncProvider.tsx
+  s_ee3185a6d42b9d::t_845b86190f475f 1-44
+stores/sync.ts
+  s_ee3185a6d42b9d::t_4d78952660cd4e 1-23
+stores/questions.ts
+  s_ee3185a6d42b9d::t_d99cb97c944d69 1-53
+stores/auth.ts
+  s_ee3185a6d42b9d::t_6fb0df83709652 1-12
+lib/db/seed.ts
+  s_ee3185a6d42b9d::t_74377a22c8d0af 1-24
+stores/flashcards.ts
+  s_ee3185a6d42b9d::t_4de6b5f489f84f 1-64
+stores/materials.ts
+  s_ee3185a6d42b9d::t_5de88bea68e7a9 1-53
+stores/topics.ts
+  s_ee3185a6d42b9d::t_397f8b71a014e6 1-47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "050d5abeb9b5b06bb8ff5ce610ff508de65a2410",
+  "prompts": {},
+  "sessions": {
+    "s_ee3185a6d42b9d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c146fbbc-7873-41fb-990b-3cd50f03a448",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Miguel <mi_lmc@hotmail.com>"
+    }
+  }
+}
