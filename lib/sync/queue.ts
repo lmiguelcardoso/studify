@@ -1,7 +1,6 @@
 import { db } from '@/lib/db'
 import { createClient } from '@/lib/supabase/client'
 import type { SyncQueueItem, SyncTable } from '@/types'
-import { v4 as uuidv4 } from 'crypto'
 
 export async function enqueue(
   table: SyncTable,
