@@ -1,0 +1,99 @@
+.agents/skills/supabase-postgres-best-practices/references/conn-limits.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-44
+.agents/skills/supabase-postgres-best-practices/references/schema-foreign-key-indexes.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-59
+.agents/skills/supabase/CHANGELOG.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-35
+.agents/skills/supabase-postgres-best-practices/references/data-pagination.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-50
+.agents/skills/supabase/assets/feedback-issue-template.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-17
+.agents/skills/supabase-postgres-best-practices/references/schema-lowercase-identifiers.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-55
+.agents/skills/supabase-postgres-best-practices/references/_contributing.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-170
+.agents/skills/supabase-postgres-best-practices/references/schema-partitioning.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-55
+.agents/skills/supabase-postgres-best-practices/references/query-composite-indexes.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-44
+.agents/skills/supabase/references/skill-feedback.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-17
+.agents/skills/supabase-postgres-best-practices/references/schema-data-types.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-46
+.agents/skills/supabase-postgres-best-practices/references/lock-short-transactions.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-50
+.agents/skills/supabase-postgres-best-practices/references/security-rls-performance.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-63
+.agents/skills/supabase-postgres-best-practices/SKILL.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-64
+.agents/skills/supabase-postgres-best-practices/references/monitor-explain-analyze.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-45
+.agents/skills/supabase/SKILL.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-135
+.agents/skills/supabase-postgres-best-practices/references/schema-primary-keys.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-61
+.agents/skills/supabase-postgres-best-practices/references/monitor-pg-stat-statements.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-55
+.agents/skills/supabase-postgres-best-practices/references/query-covering-indexes.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-40
+.agents/skills/supabase-postgres-best-practices/references/lock-skip-locked.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-54
+.agents/skills/supabase-postgres-best-practices/references/_sections.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-39
+.agents/skills/supabase-postgres-best-practices/references/data-n-plus-one.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-53
+.agents/skills/supabase-postgres-best-practices/references/query-missing-indexes.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-43
+.agents/skills/supabase-postgres-best-practices/references/query-partial-indexes.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-45
+.agents/skills/supabase-postgres-best-practices/references/conn-pooling.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-41
+.agents/skills/supabase-postgres-best-practices/references/security-privileges.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-54
+.agents/skills/supabase-postgres-best-practices/references/security-rls-basics.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-50
+.agents/skills/supabase-postgres-best-practices/references/lock-deadlock-prevention.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-68
+.agents/skills/supabase-postgres-best-practices/references/conn-prepared-statements.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-46
+.agents/skills/supabase-postgres-best-practices/references/query-index-types.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-48
+.agents/skills/supabase-postgres-best-practices/references/_template.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-34
+.agents/skills/supabase-postgres-best-practices/references/schema-constraints.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-80
+.agents/skills/supabase-postgres-best-practices/references/conn-idle-timeout.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-46
+.agents/skills/supabase-postgres-best-practices/references/data-batch-inserts.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-54
+.agents/skills/supabase-postgres-best-practices/references/advanced-jsonb-indexing.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-49
+.agents/skills/supabase-postgres-best-practices/references/monitor-vacuum-analyze.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-55
+.agents/skills/supabase-postgres-best-practices/references/lock-advisory.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-56
+.agents/skills/supabase-postgres-best-practices/references/advanced-full-text-search.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-55
+.agents/skills/supabase-postgres-best-practices/CHANGELOG.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-29
+.agents/skills/supabase-postgres-best-practices/references/data-upsert.md
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-50
+skills-lock.json
+  s_ee3185a6d42b9d::t_0d9afe53f08929 1-17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "2fd44a6a3b12f0d25d4240eabc7925430d6a9dc1",
+  "prompts": {},
+  "sessions": {
+    "s_ee3185a6d42b9d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c146fbbc-7873-41fb-990b-3cd50f03a448",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Miguel <mi_lmc@hotmail.com>"
+    }
+  }
+}
