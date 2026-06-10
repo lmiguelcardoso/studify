@@ -1,6 +1,5 @@
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
-import { getLocale } from 'next-intl/server'
 import { Navbar } from '@/components/layout/Navbar'
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
@@ -10,8 +9,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   } = await supabase.auth.getUser()
 
   if (!user) {
-    const locale = await getLocale()
-    redirect(`/${locale}/login`)
+    redirect('/login')
   }
 
   return (

@@ -1,9 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { useLocale, useTranslations } from 'next-intl'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -31,8 +30,6 @@ interface RegisterFormProps {
 
 export function RegisterForm({ title }: RegisterFormProps) {
   const t = useTranslations('auth')
-  const locale = useLocale()
-  const router = useRouter()
   const [serverError, setServerError] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
 
@@ -65,7 +62,7 @@ export function RegisterForm({ title }: RegisterFormProps) {
         <CardContent>
           <p className="text-sm text-muted-foreground">
             Check your email to confirm your account, then{' '}
-            <Link href={`/${locale}/login`} className="text-primary hover:underline font-medium">
+            <Link href={"/login"} className="text-primary hover:underline font-medium">
               {t('login')}
             </Link>
             .
@@ -130,7 +127,7 @@ export function RegisterForm({ title }: RegisterFormProps) {
           </Button>
           <p className="text-sm text-muted-foreground text-center">
             {t('hasAccount')}{' '}
-            <Link href={`/${locale}/login`} className="text-primary hover:underline font-medium">
+            <Link href={"/login"} className="text-primary hover:underline font-medium">
               {t('login')}
             </Link>
           </p>

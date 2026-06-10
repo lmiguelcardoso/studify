@@ -5,8 +5,9 @@ import { routing } from '@/i18n/routing'
 
 const intlMiddleware = createIntlMiddleware(routing)
 
-const APP_ROUTES = /\/(pt-BR|en)\/(dashboard|topics|quiz|flashcards|materials|stats)/
-const AUTH_ROUTES = /\/(pt-BR|en)\/(login|register)/
+// With localePrefix: 'never', URLs have no locale segment — match plain paths
+const APP_ROUTES = /^\/(dashboard|topics|quiz|flashcards|materials|stats)(\/.*)?$/
+const AUTH_ROUTES = /^\/(login|register)$/
 
 export async function middleware(request: NextRequest) {
   const response = intlMiddleware(request)
@@ -30,15 +31,13 @@ export async function middleware(request: NextRequest) {
   } = await supabase.auth.getUser()
 
   const { pathname } = request.nextUrl
-  const localeMatch = pathname.match(/^\/(pt-BR|en)/)
-  const locale = localeMatch ? localeMatch[1] : routing.defaultLocale
 
   if (APP_ROUTES.test(pathname) && !user) {
-    return NextResponse.redirect(new URL(`/${locale}/login`, request.url))
+    return NextResponse.redirect(new URL('/login', request.url))
   }
 
   if (AUTH_ROUTES.test(pathname) && user) {
-    return NextResponse.redirect(new URL(`/${locale}/dashboard`, request.url))
+    return NextResponse.redirect(new URL('/dashboard', request.url))
   }
 
   return response

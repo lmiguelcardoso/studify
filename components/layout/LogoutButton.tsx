@@ -1,18 +1,17 @@
 'use client'
 
-import { useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/navigation'
 import { LogOut } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export function LogoutButton() {
   const t = useTranslations('auth')
-  const locale = useLocale()
   const router = useRouter()
 
   async function handleLogout() {
-    await fetch(`/api/auth/logout?locale=${locale}`, { method: 'POST' })
-    router.push(`/${locale}/login`)
+    await fetch('/api/auth/logout', { method: 'POST' })
+    router.push('/login')
     router.refresh()
   }
 
