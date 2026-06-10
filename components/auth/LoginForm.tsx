@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
-import { Link } from '@/i18n/navigation'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -98,12 +97,6 @@ export function LoginForm({ title, subtitle }: LoginFormProps) {
           <Button type="submit" className="w-full" disabled={isSubmitting}>
             {isSubmitting ? '...' : t('login')}
           </Button>
-          <p className="text-sm text-muted-foreground text-center">
-            {t('noAccount')}{' '}
-            <Link href="/register" className="text-primary hover:underline font-medium">
-              {t('register')}
-            </Link>
-          </p>
         </CardFooter>
       </form>
     </Card>
