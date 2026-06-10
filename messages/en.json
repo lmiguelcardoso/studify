@@ -1,0 +1,113 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "back": "Back",
+    "next": "Next",
+    "finish": "Finish",
+    "confirm": "Confirm",
+    "search": "Search",
+    "noResults": "No results found"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "topics": "Topics",
+    "quiz": "Quiz",
+    "flashcards": "Flashcards",
+    "materials": "Materials",
+    "stats": "Statistics"
+  },
+  "auth": {
+    "login": "Sign in",
+    "logout": "Sign out",
+    "email": "Email",
+    "password": "Password",
+    "loginTitle": "Sign in to Studify",
+    "loginSubtitle": "Your personal study platform",
+    "noAccount": "Don't have an account?",
+    "register": "Sign up",
+    "hasAccount": "Already have an account?",
+    "registerTitle": "Create account"
+  },
+  "topics": {
+    "title": "Topics",
+    "new": "New topic",
+    "name": "Name",
+    "description": "Description",
+    "parent": "Parent topic",
+    "color": "Color",
+    "noTopics": "No topics created yet",
+    "subtopics": "Subtopics"
+  },
+  "quiz": {
+    "title": "Quiz",
+    "start": "Start quiz",
+    "question": "Question",
+    "of": "of",
+    "correct": "Correct!",
+    "incorrect": "Incorrect",
+    "explanation": "Explanation",
+    "result": "Result",
+    "accuracy": "Accuracy",
+    "newQuestion": "New question",
+    "questionText": "Question text",
+    "options": "Options",
+    "addOption": "Add option",
+    "correctAnswer": "Correct answer",
+    "type": {
+      "multiple_choice": "Multiple choice",
+      "true_false": "True or False"
+    },
+    "true": "True",
+    "false": "False"
+  },
+  "flashcards": {
+    "title": "Flashcards",
+    "front": "Front",
+    "back": "Back",
+    "newCard": "New flashcard",
+    "flip": "Flip",
+    "pile": {
+      "unknown": "Don't know",
+      "learning": "Almost there",
+      "known": "Know it"
+    },
+    "startReview": "Start review",
+    "noCards": "No flashcards created yet",
+    "convertFromQuestion": "Convert question to flashcard"
+  },
+  "materials": {
+    "title": "Materials",
+    "newMaterial": "New material",
+    "uploadPdf": "Upload PDF",
+    "addVideoLink": "Add video link",
+    "uploadVideo": "Upload video",
+    "type": {
+      "pdf": "PDF",
+      "video_link": "Video (link)",
+      "video_upload": "Video (upload)"
+    },
+    "noMaterials": "No materials added yet"
+  },
+  "stats": {
+    "title": "Statistics",
+    "totalQuizzes": "Quizzes completed",
+    "totalFlashcards": "Flashcards reviewed",
+    "avgAccuracy": "Average accuracy",
+    "studyStreak": "Study streak",
+    "days": "days",
+    "accuracyOverTime": "Accuracy over time",
+    "cardsByPile": "Cards by pile"
+  },
+  "dashboard": {
+    "welcome": "Welcome back",
+    "recentTopics": "Recent topics",
+    "quickActions": "Quick actions",
+    "startStudying": "Start studying"
+  }
+}

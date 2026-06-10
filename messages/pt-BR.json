@@ -1,0 +1,113 @@
+{
+  "common": {
+    "loading": "Carregando...",
+    "error": "Ocorreu um erro",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "create": "Criar",
+    "back": "Voltar",
+    "next": "Próximo",
+    "finish": "Finalizar",
+    "confirm": "Confirmar",
+    "search": "Buscar",
+    "noResults": "Nenhum resultado encontrado"
+  },
+  "nav": {
+    "dashboard": "Painel",
+    "topics": "Tópicos",
+    "quiz": "Quiz",
+    "flashcards": "Flashcards",
+    "materials": "Materiais",
+    "stats": "Estatísticas"
+  },
+  "auth": {
+    "login": "Entrar",
+    "logout": "Sair",
+    "email": "E-mail",
+    "password": "Senha",
+    "loginTitle": "Entrar no Studify",
+    "loginSubtitle": "Sua plataforma pessoal de estudos",
+    "noAccount": "Não tem conta?",
+    "register": "Cadastre-se",
+    "hasAccount": "Já tem conta?",
+    "registerTitle": "Criar conta"
+  },
+  "topics": {
+    "title": "Tópicos",
+    "new": "Novo tópico",
+    "name": "Nome",
+    "description": "Descrição",
+    "parent": "Tópico pai",
+    "color": "Cor",
+    "noTopics": "Nenhum tópico criado ainda",
+    "subtopics": "Subtópicos"
+  },
+  "quiz": {
+    "title": "Quiz",
+    "start": "Iniciar quiz",
+    "question": "Questão",
+    "of": "de",
+    "correct": "Correto!",
+    "incorrect": "Incorreto",
+    "explanation": "Explicação",
+    "result": "Resultado",
+    "accuracy": "Aproveitamento",
+    "newQuestion": "Nova questão",
+    "questionText": "Enunciado",
+    "options": "Opções",
+    "addOption": "Adicionar opção",
+    "correctAnswer": "Resposta correta",
+    "type": {
+      "multiple_choice": "Múltipla escolha",
+      "true_false": "Verdadeiro ou Falso"
+    },
+    "true": "Verdadeiro",
+    "false": "Falso"
+  },
+  "flashcards": {
+    "title": "Flashcards",
+    "front": "Frente",
+    "back": "Verso",
+    "newCard": "Novo flashcard",
+    "flip": "Virar",
+    "pile": {
+      "unknown": "Não sei",
+      "learning": "Mais ou menos",
+      "known": "Sei bem"
+    },
+    "startReview": "Iniciar revisão",
+    "noCards": "Nenhum flashcard criado ainda",
+    "convertFromQuestion": "Converter questão em flashcard"
+  },
+  "materials": {
+    "title": "Materiais",
+    "newMaterial": "Novo material",
+    "uploadPdf": "Enviar PDF",
+    "addVideoLink": "Adicionar link de vídeo",
+    "uploadVideo": "Enviar vídeo",
+    "type": {
+      "pdf": "PDF",
+      "video_link": "Vídeo (link)",
+      "video_upload": "Vídeo (upload)"
+    },
+    "noMaterials": "Nenhum material adicionado ainda"
+  },
+  "stats": {
+    "title": "Estatísticas",
+    "totalQuizzes": "Quizzes realizados",
+    "totalFlashcards": "Flashcards revisados",
+    "avgAccuracy": "Aproveitamento médio",
+    "studyStreak": "Sequência de estudos",
+    "days": "dias",
+    "accuracyOverTime": "Aproveitamento ao longo do tempo",
+    "cardsByPile": "Cards por pilha"
+  },
+  "dashboard": {
+    "welcome": "Bem-vindo de volta",
+    "recentTopics": "Tópicos recentes",
+    "quickActions": "Ações rápidas",
+    "startStudying": "Começar a estudar"
+  }
+}
