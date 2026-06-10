@@ -1,0 +1,21 @@
+supabase/migrations/20260610000000_initial_schema.sql
+  s_ee3185a6d42b9d::t_72c6f596d29df5 1-199
+supabase/seed.sql
+  s_ee3185a6d42b9d::t_ae46e8a6d87767 1-48
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "7036b107276bf30c0bb5049fcd43fe8376a20e00",
+  "prompts": {},
+  "sessions": {
+    "s_ee3185a6d42b9d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c146fbbc-7873-41fb-990b-3cd50f03a448",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Miguel <luiz.lcardoso@mercadolivre.com>"
+    }
+  }
+}
