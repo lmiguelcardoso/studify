@@ -1,0 +1,29 @@
+components/layout/LanguageToggle.tsx
+  s_ee3185a6d42b9d::t_eecd3884e8efad 1-22
+components/layout/LogoutButton.tsx
+  s_ee3185a6d42b9d::t_68faa2070750df 1-25
+components/layout/Navbar.tsx
+  s_ee3185a6d42b9d::t_84425f721b4909 1-50
+app/[locale]/(app)/layout.tsx
+  s_ee3185a6d42b9d::t_ee555b4867dc0b 4,19-20
+i18n/navigation.ts
+  s_ee3185a6d42b9d::t_4722d20ef648b8 1-5
+app/[locale]/(app)/dashboard/page.tsx
+  s_ee3185a6d42b9d::t_a39f3c6fb004b9 10,14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "3a05a3df25501652afe21910169ff67dd250545f",
+  "prompts": {},
+  "sessions": {
+    "s_ee3185a6d42b9d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c146fbbc-7873-41fb-990b-3cd50f03a448",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Miguel <mi_lmc@hotmail.com>"
+    }
+  }
+}
