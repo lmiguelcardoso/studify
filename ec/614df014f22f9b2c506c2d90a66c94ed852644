@@ -1,0 +1,23 @@
+lib/supabase/client.ts
+  s_ee3185a6d42b9d::t_8aac3cce5a90db 6
+lib/supabase/server.ts
+  s_ee3185a6d42b9d::t_8aac3cce5a90db 9
+middleware.ts
+  s_ee3185a6d42b9d::t_8aac3cce5a90db 17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "ec614df014f22f9b2c506c2d90a66c94ed852644",
+  "prompts": {},
+  "sessions": {
+    "s_ee3185a6d42b9d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c146fbbc-7873-41fb-990b-3cd50f03a448",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Miguel <mi_lmc@hotmail.com>"
+    }
+  }
+}
