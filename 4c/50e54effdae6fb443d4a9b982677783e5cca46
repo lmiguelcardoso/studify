@@ -1,0 +1,36 @@
+app/api/auth/logout/route.ts
+  s_ee3185a6d42b9d::t_5659676bffa851 7
+app/[locale]/page.tsx
+  s_ee3185a6d42b9d::t_1aa378525c3eb6 4,10
+components/layout/LogoutButton.tsx
+  s_ee3185a6d42b9d::t_4bca04e2bf9d7c 3,13-14
+app/[locale]/(app)/layout.tsx
+  s_ee3185a6d42b9d::t_31df8d7ae9a74f 12
+components/auth/LoginForm.tsx
+  s_ee3185a6d42b9d::t_a8c123f9393dbe 5-6,49,103
+middleware.ts
+  s_ee3185a6d42b9d::t_2f4e8543a1fed7 8-10,36,40
+components/layout/Navbar.tsx
+  s_ee3185a6d42b9d::t_e916a70cc8fbb7 7-14,16-17,23,28,35
+i18n/routing.ts
+  s_ee3185a6d42b9d::t_0a7e2f6e727563 6-7
+components/auth/RegisterForm.tsx
+  s_ee3185a6d42b9d::t_b03796f552cdee 65,130
+  s_ee3185a6d42b9d::t_061962fcea101d 4-5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "4c50e54effdae6fb443d4a9b982677783e5cca46",
+  "prompts": {},
+  "sessions": {
+    "s_ee3185a6d42b9d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c146fbbc-7873-41fb-990b-3cd50f03a448",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Miguel <mi_lmc@hotmail.com>"
+    }
+  }
+}
