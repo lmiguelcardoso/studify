@@ -1,0 +1,19 @@
+CLAUDE.md
+  s_ee3185a6d42b9d::t_aa210137854b48 2-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "1538eab060262b1e539e2d658f412114c6d59890",
+  "prompts": {},
+  "sessions": {
+    "s_ee3185a6d42b9d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c146fbbc-7873-41fb-990b-3cd50f03a448",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Miguel <luiz.lcardoso@mercadolivre.com>"
+    }
+  }
+}
