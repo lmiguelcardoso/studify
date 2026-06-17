@@ -91,6 +91,7 @@
   },
   "flashcards": {
     "title": "Flashcards",
+    "selectTopic": "Escolha um tópico para revisar seus flashcards.",
     "front": "Frente",
     "back": "Verso",
     "newCard": "Novo flashcard",
@@ -106,7 +107,13 @@
     "noCards": "Nenhum flashcard criado ainda",
     "convertFromQuestion": "Converter questão em flashcard",
     "deleteTitle": "Excluir flashcard",
-    "deleteDescription": "Excluir este flashcard: {front}"
+    "deleteDescription": "Excluir este flashcard: {front}",
+    "reviewTopic": "Revisar tópico",
+    "reviewed": "revisados",
+    "savingResult": "Salvando resultado...",
+    "result": "Resultado da revisão",
+    "cardsReviewed": "Cards revisados",
+    "reviewAgain": "Revisar novamente"
   },
   "materials": {
     "title": "Materiais",
