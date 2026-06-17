@@ -39,10 +39,19 @@
     "new": "New topic",
     "name": "Name",
     "description": "Description",
+    "descriptionText": "Organize your study material into parent topics and subtopics.",
     "parent": "Parent topic",
+    "noParent": "No parent",
     "color": "Color",
     "noTopics": "No topics created yet",
-    "subtopics": "Subtopics"
+    "subtopics": "Subtopics",
+    "home": "Home",
+    "deleteTitle": "Delete topic",
+    "deleteDescription": "Delete {name}? This also removes subtopics, questions, flashcards, and materials linked to it.",
+    "questions": "Questions",
+    "flashcards": "Flashcards",
+    "materials": "Materials",
+    "comingSoon": "This section will be available in a later issue."
   },
   "quiz": {
     "title": "Quiz",
