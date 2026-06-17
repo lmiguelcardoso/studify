@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button'
 import { DeleteTopicDialog } from '@/components/topics/DeleteTopicDialog'
 import { TopicForm } from '@/components/topics/TopicForm'
 import { TopicTree } from '@/components/topics/TopicTree'
+import { QuestionsPanel } from '@/components/quiz/QuestionsPanel'
 import { useTopicsStore } from '@/stores/topics'
 
 interface TopicDetailClientProps {
@@ -175,6 +176,8 @@ export function TopicDetailClient({ topicId, userId }: TopicDetailClientProps) {
             </div>
           )}
         </section>
+      ) : activeTab === 'questions' ? (
+        <QuestionsPanel topicId={topicId} userId={userId} />
       ) : (
         <div className="rounded-md border border-dashed p-8 text-center text-sm text-muted-foreground">
           {t('comingSoon')}

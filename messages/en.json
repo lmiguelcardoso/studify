@@ -64,10 +64,18 @@
     "result": "Result",
     "accuracy": "Accuracy",
     "newQuestion": "New question",
+    "editQuestion": "Edit",
+    "deleteQuestion": "Delete",
+    "questionType": "Question type",
     "questionText": "Question text",
     "options": "Options",
     "addOption": "Add option",
     "correctAnswer": "Correct answer",
+    "validation": "Add 2 to 6 options and mark exactly one correct answer.",
+    "noQuestions": "No questions created yet",
+    "deleteTitle": "Delete question",
+    "deleteDescription": "Delete this question: {text}",
+    "convertToFlashcard": "Convert to flashcard",
     "type": {
       "multiple_choice": "Multiple choice",
       "true_false": "True or False"
