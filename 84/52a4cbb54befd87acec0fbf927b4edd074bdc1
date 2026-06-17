@@ -1,0 +1,21 @@
+types/index.ts
+  s_3b7f428ef38d80::t_2b4d4be8f23da3 111
+lib/sync/queue.ts
+  s_3b7f428ef38d80::t_2b4d4be8f23da3 8,31-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "8452a4cbb54befd87acec0fbf927b4edd074bdc1",
+  "prompts": {},
+  "sessions": {
+    "s_3b7f428ef38d80": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ed2c6-fc6a-75b2-a665-a0d824c2b4f4",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Miguel <mi_lmc@hotmail.com>"
+    }
+  }
+}
