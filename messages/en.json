@@ -77,6 +77,8 @@
     "deleteTitle": "Delete question",
     "deleteDescription": "Delete this question: {text}",
     "convertToFlashcard": "Convert to flashcard",
+    "alreadyConverted": "Already converted",
+    "converted": "Flashcard created from question",
     "reviewTopic": "Review topic",
     "tryAgain": "Try again",
     "savingResult": "Saving result...",
@@ -92,6 +94,8 @@
     "front": "Front",
     "back": "Back",
     "newCard": "New flashcard",
+    "editCard": "Edit",
+    "deleteCard": "Delete",
     "flip": "Flip",
     "pile": {
       "unknown": "Don't know",
@@ -100,7 +104,9 @@
     },
     "startReview": "Start review",
     "noCards": "No flashcards created yet",
-    "convertFromQuestion": "Convert question to flashcard"
+    "convertFromQuestion": "Convert question to flashcard",
+    "deleteTitle": "Delete flashcard",
+    "deleteDescription": "Delete this flashcard: {front}"
   },
   "materials": {
     "title": "Materials",

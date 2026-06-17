@@ -77,6 +77,8 @@
     "deleteTitle": "Excluir questão",
     "deleteDescription": "Excluir esta questão: {text}",
     "convertToFlashcard": "Converter em flashcard",
+    "alreadyConverted": "Já convertido",
+    "converted": "Flashcard criado a partir da questão",
     "reviewTopic": "Revisar tópico",
     "tryAgain": "Tentar novamente",
     "savingResult": "Salvando resultado...",
@@ -92,6 +94,8 @@
     "front": "Frente",
     "back": "Verso",
     "newCard": "Novo flashcard",
+    "editCard": "Editar",
+    "deleteCard": "Excluir",
     "flip": "Virar",
     "pile": {
       "unknown": "Não sei",
@@ -100,7 +104,9 @@
     },
     "startReview": "Iniciar revisão",
     "noCards": "Nenhum flashcard criado ainda",
-    "convertFromQuestion": "Converter questão em flashcard"
+    "convertFromQuestion": "Converter questão em flashcard",
+    "deleteTitle": "Excluir flashcard",
+    "deleteDescription": "Excluir este flashcard: {front}"
   },
   "materials": {
     "title": "Materiais",

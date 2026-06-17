@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl'
 import { Link, useRouter } from '@/i18n/navigation'
 import { Button } from '@/components/ui/button'
 import { DeleteTopicDialog } from '@/components/topics/DeleteTopicDialog'
+import { FlashcardsPanel } from '@/components/flashcards/FlashcardsPanel'
 import { TopicForm } from '@/components/topics/TopicForm'
 import { TopicTree } from '@/components/topics/TopicTree'
 import { QuestionsPanel } from '@/components/quiz/QuestionsPanel'
@@ -178,6 +179,8 @@ export function TopicDetailClient({ topicId, userId }: TopicDetailClientProps) {
         </section>
       ) : activeTab === 'questions' ? (
         <QuestionsPanel topicId={topicId} userId={userId} />
+      ) : activeTab === 'flashcards' ? (
+        <FlashcardsPanel topicId={topicId} userId={userId} />
       ) : (
         <div className="rounded-md border border-dashed p-8 text-center text-sm text-muted-foreground">
           {t('comingSoon')}
