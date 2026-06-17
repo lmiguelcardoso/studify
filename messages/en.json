@@ -102,7 +102,17 @@
     "studyStreak": "Study streak",
     "days": "days",
     "accuracyOverTime": "Accuracy over time",
-    "cardsByPile": "Cards by pile"
+    "cardsByPile": "Cards by pile",
+    "loading": "Loading statistics...",
+    "emptyTitle": "No study sessions yet",
+    "emptyDescription": "Complete a quiz or review flashcards to start building your statistics dashboard.",
+    "topicBreakdown": "Topic breakdown",
+    "topic": "Topic",
+    "sessions": "Sessions",
+    "noTopicData": "No completed quiz data by topic yet.",
+    "pileUnknown": "Don't know",
+    "pileLearning": "Almost there",
+    "pileKnown": "Know it"
   },
   "dashboard": {
     "welcome": "Welcome back",
