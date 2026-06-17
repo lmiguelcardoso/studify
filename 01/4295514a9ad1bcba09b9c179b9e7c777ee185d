@@ -1,0 +1,19 @@
+app/manifest.ts
+  s_3b7f428ef38d80::t_63b53c3e813e79 18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "014295514a9ad1bcba09b9c179b9e7c777ee185d",
+  "prompts": {},
+  "sessions": {
+    "s_3b7f428ef38d80": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ed2c6-fc6a-75b2-a665-a0d824c2b4f4",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Miguel <mi_lmc@hotmail.com>"
+    }
+  }
+}
