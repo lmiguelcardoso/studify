@@ -1,0 +1,58 @@
+app/manifest.ts
+  s_3b7f428ef38d80::t_95d307656254ab 1-22
+stores/materials.ts
+  s_3b7f428ef38d80::t_11569e31e29e2b 1-52
+lib/db/seed.ts
+  s_3b7f428ef38d80::t_95d307656254ab 1-24
+stores/questions.ts
+  s_3b7f428ef38d80::t_11569e31e29e2b 1-52
+components/layout/SyncProvider.tsx
+  s_3b7f428ef38d80::t_6948c66cb89042 5
+  s_3b7f428ef38d80::t_11569e31e29e2b 1-4,6-54
+app/[locale]/layout.tsx
+  s_3b7f428ef38d80::t_c87740e2418cb5 14
+app/icon.tsx
+  s_3b7f428ef38d80::t_95d307656254ab 1-32
+lib/supabase/client.ts
+  s_3b7f428ef38d80::t_bd144197268409 2,7
+proxy.ts
+  s_3b7f428ef38d80::t_7caa2c40b10f89 1-49
+app/[locale]/(app)/layout.tsx
+  s_3b7f428ef38d80::t_11569e31e29e2b 4,17-22
+app/apple-icon.tsx
+  s_3b7f428ef38d80::t_95d307656254ab 1
+public/icon.svg
+  s_3b7f428ef38d80::t_95d307656254ab 1-5
+lib/supabase/server.ts
+  s_3b7f428ef38d80::t_bd144197268409 3,10
+lib/supabase/env.ts
+  s_3b7f428ef38d80::t_bd144197268409 1-6
+public/sw.js
+  s_3b7f428ef38d80::t_95d307656254ab 1-56
+stores/topics.ts
+  s_3b7f428ef38d80::t_11569e31e29e2b 1-45
+stores/flashcards.ts
+  s_3b7f428ef38d80::t_11569e31e29e2b 1-64
+lib/db/index.ts
+  s_3b7f428ef38d80::t_bd144197268409 34
+stores/sync.ts
+  s_3b7f428ef38d80::t_11569e31e29e2b 1-21
+components/ui/input.tsx
+  s_3b7f428ef38d80::t_4cae6fbcea7d78 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "82304f31d6e8bd4b2b71031d0ff1c09a35b9a900",
+  "prompts": {},
+  "sessions": {
+    "s_3b7f428ef38d80": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ed2c6-fc6a-75b2-a665-a0d824c2b4f4",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Miguel <mi_lmc@hotmail.com>"
+    }
+  }
+}
