@@ -56,6 +56,7 @@
   "quiz": {
     "title": "Quiz",
     "start": "Start quiz",
+    "selectTopic": "Choose a topic to start a shuffled quiz session.",
     "question": "Question",
     "of": "of",
     "correct": "Correct!",
@@ -76,6 +77,9 @@
     "deleteTitle": "Delete question",
     "deleteDescription": "Delete this question: {text}",
     "convertToFlashcard": "Convert to flashcard",
+    "reviewTopic": "Review topic",
+    "tryAgain": "Try again",
+    "savingResult": "Saving result...",
     "type": {
       "multiple_choice": "Multiple choice",
       "true_false": "True or False"
