@@ -1,0 +1,19 @@
+stores/auth.ts
+  s_1224c236e43a26::t_5f9014ee85f39b 1-12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "265add1f7362e4fb0168b2defa7a77967858224b",
+  "prompts": {},
+  "sessions": {
+    "s_1224c236e43a26": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "019ed2c6-fc6a-75b2-a665-a0d824c2b4f4",
+        "model": "unknown"
+      },
+      "human_author": "Miguel <mi_lmc@hotmail.com>"
+    }
+  }
+}
