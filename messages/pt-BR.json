@@ -111,7 +111,17 @@
     "studyStreak": "Sequência de estudos",
     "days": "dias",
     "accuracyOverTime": "Aproveitamento ao longo do tempo",
-    "cardsByPile": "Cards por pilha"
+    "cardsByPile": "Cards por pilha",
+    "loading": "Carregando estatísticas...",
+    "emptyTitle": "Nenhuma sessão de estudo ainda",
+    "emptyDescription": "Conclua um quiz ou revise flashcards para começar a montar seu painel de estatísticas.",
+    "topicBreakdown": "Detalhamento por tópico",
+    "topic": "Tópico",
+    "sessions": "Sessões",
+    "noTopicData": "Ainda não há dados de quiz concluído por tópico.",
+    "pileUnknown": "Não sei",
+    "pileLearning": "Mais ou menos",
+    "pileKnown": "Sei bem"
   },
   "dashboard": {
     "welcome": "Bem-vindo de volta",
