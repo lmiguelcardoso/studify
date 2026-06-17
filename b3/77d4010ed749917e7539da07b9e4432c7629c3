@@ -1,0 +1,43 @@
+components/quiz/ProgressBar.tsx
+  s_3b7f428ef38d80::t_e0cd57614f3251 1-27
+components/quiz/ResultsCard.tsx
+  s_3b7f428ef38d80::t_e0cd57614f3251 1-47
+components/quiz/QuizTopicSelector.tsx
+  s_3b7f428ef38d80::t_e0cd57614f3251 1-64
+components/quiz/QuizResultsClient.tsx
+  s_3b7f428ef38d80::t_e0cd57614f3251 1-30,33-58
+  s_3b7f428ef38d80::t_38d839628381d4 31-32
+components/quiz/FeedbackSlide.tsx
+  s_3b7f428ef38d80::t_e0cd57614f3251 1-68
+components/quiz/QuizPlayer.tsx
+  s_3b7f428ef38d80::t_e0cd57614f3251 1-30,34-180
+  s_3b7f428ef38d80::t_24458252c656ef 31-33
+messages/en.json
+  s_3b7f428ef38d80::t_24458252c656ef 59,80-82
+app/[locale]/(app)/quiz/[topicId]/page.tsx
+  s_3b7f428ef38d80::t_e0cd57614f3251 1-20
+messages/pt-BR.json
+  s_3b7f428ef38d80::t_24458252c656ef 59,80-82
+components/quiz/QuestionSlide.tsx
+  s_3b7f428ef38d80::t_e0cd57614f3251 1-31
+app/[locale]/(app)/quiz/page.tsx
+  s_3b7f428ef38d80::t_e0cd57614f3251 1-5
+app/[locale]/(app)/quiz/[topicId]/results/page.tsx
+  s_3b7f428ef38d80::t_e0cd57614f3251 1-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "b377d4010ed749917e7539da07b9e4432c7629c3",
+  "prompts": {},
+  "sessions": {
+    "s_3b7f428ef38d80": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ed2c6-fc6a-75b2-a665-a0d824c2b4f4",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Miguel <mi_lmc@hotmail.com>"
+    }
+  }
+}
