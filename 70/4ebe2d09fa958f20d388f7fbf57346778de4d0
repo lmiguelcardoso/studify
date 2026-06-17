@@ -1,0 +1,19 @@
+app/manifest.ts
+  s_1224c236e43a26::t_bd3f9f32a73440 18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "704ebe2d09fa958f20d388f7fbf57346778de4d0",
+  "prompts": {},
+  "sessions": {
+    "s_1224c236e43a26": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "019ed2c6-fc6a-75b2-a665-a0d824c2b4f4",
+        "model": "unknown"
+      },
+      "human_author": "Miguel <mi_lmc@hotmail.com>"
+    }
+  }
+}
