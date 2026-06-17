@@ -31,7 +31,7 @@ class StudifyDB extends Dexie {
       quizSessions: 'id, user_id, topic_id, started_at',
       quizAnswers: 'id, session_id, question_id',
       flashcardSessions: 'id, user_id, topic_id, started_at',
-      syncQueue: '++id, table, operation, created_at',
+      syncQueue: 'id, table, operation, created_at',
     })
   }
 }
