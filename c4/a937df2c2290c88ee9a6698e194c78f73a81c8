@@ -1,0 +1,41 @@
+components/flashcards/FlashcardTopicSelector.tsx
+  s_3b7f428ef38d80::t_81771beab11ab0 1-64
+components/flashcards/FlashcardResultsClient.tsx
+  s_3b7f428ef38d80::t_ca63907337d022 3,25,28,30-31,33,50
+  s_3b7f428ef38d80::t_81771beab11ab0 1-2,4-24,26-27,29,32,34-49,51-66
+messages/en.json
+  s_3b7f428ef38d80::t_8f4f840e7f1c76 94,110-116
+app/[locale]/(app)/flashcards/[topicId]/page.tsx
+  s_3b7f428ef38d80::t_81771beab11ab0 1-20
+app/[locale]/(app)/flashcards/page.tsx
+  s_3b7f428ef38d80::t_81771beab11ab0 1-5
+components/flashcards/FlashcardReviewer.tsx
+  s_3b7f428ef38d80::t_ca63907337d022 46-49
+  s_3b7f428ef38d80::t_81771beab11ab0 1-45,50-130
+app/[locale]/(app)/flashcards/[topicId]/results/page.tsx
+  s_3b7f428ef38d80::t_81771beab11ab0 1-11
+app/globals.css
+  s_3b7f428ef38d80::t_81771beab11ab0 67-82
+components/flashcards/PileSelector.tsx
+  s_3b7f428ef38d80::t_81771beab11ab0 1-30
+messages/pt-BR.json
+  s_3b7f428ef38d80::t_8f4f840e7f1c76 94,110-116
+components/flashcards/FlipCard.tsx
+  s_3b7f428ef38d80::t_81771beab11ab0 1-30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "c4a937df2c2290c88ee9a6698e194c78f73a81c8",
+  "prompts": {},
+  "sessions": {
+    "s_3b7f428ef38d80": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ed2c6-fc6a-75b2-a665-a0d824c2b4f4",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Miguel <mi_lmc@hotmail.com>"
+    }
+  }
+}
