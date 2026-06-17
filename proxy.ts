@@ -2,19 +2,20 @@ import { NextRequest, NextResponse } from 'next/server'
 import createIntlMiddleware from 'next-intl/middleware'
 import { createServerClient } from '@supabase/ssr'
 import { routing } from '@/i18n/routing'
+import { getSupabasePublishableKey } from '@/lib/supabase/env'
 
 const intlMiddleware = createIntlMiddleware(routing)
 
-// With localePrefix: 'never', URLs have no locale segment — match plain paths
+// With localePrefix: 'never', URLs have no locale segment - match plain paths.
 const APP_ROUTES = /^\/(dashboard|topics|quiz|flashcards|materials|stats)(\/.*)?$/
 const AUTH_ROUTES = /^\/(login|register)$/
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const response = intlMiddleware(request)
 
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,
+    getSupabasePublishableKey()!,
     {
       cookies: {
         getAll: () => request.cookies.getAll(),

@@ -1,8 +1,8 @@
 'use client'
 
 import { useEffect } from 'react'
-import { startSyncListener, flushQueue } from '@/lib/sync/queue'
 import { seedLocalDB } from '@/lib/db/seed'
+import { flushQueue } from '@/lib/sync/queue'
 import { useSyncStore } from '@/stores/sync'
 
 interface SyncProviderProps {
@@ -14,31 +14,41 @@ export function SyncProvider({ userId, children }: SyncProviderProps) {
   const { setOnline, refreshPendingCount } = useSyncStore()
 
   useEffect(() => {
-    // Seed IndexedDB from Supabase on mount (idempotent via bulkPut)
-    seedLocalDB(userId).catch(console.error)
+    async function registerServiceWorker() {
+      if (!('serviceWorker' in navigator)) return
+      await navigator.serviceWorker.register('/sw.js', {
+        scope: '/',
+        updateViaCache: 'none',
+      })
+    }
 
-    // Flush any queued offline operations
-    if (navigator.onLine) flushQueue().then(refreshPendingCount)
+    async function primeOfflineState() {
+      await registerServiceWorker()
+      await seedLocalDB(userId)
 
-    // Track online/offline status
+      if (navigator.onLine) {
+        await flushQueue()
+      }
+
+      await refreshPendingCount()
+    }
+
     const handleOnline = () => {
       setOnline(true)
-      flushQueue().then(refreshPendingCount)
+      flushQueue().finally(refreshPendingCount)
     }
     const handleOffline = () => setOnline(false)
 
     window.addEventListener('online', handleOnline)
     window.addEventListener('offline', handleOffline)
-
-    // Register sync queue listener
-    const cleanup = startSyncListener()
+    setOnline(navigator.onLine)
+    primeOfflineState().catch(console.error)
 
     return () => {
       window.removeEventListener('online', handleOnline)
       window.removeEventListener('offline', handleOffline)
-      cleanup()
     }
-  }, [userId, setOnline, refreshPendingCount])
+  }, [refreshPendingCount, setOnline, userId])
 
-  return <>{children}</>
+  return children
 }

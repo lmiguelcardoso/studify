@@ -1,3 +1,5 @@
+'use client'
+
 import { create } from 'zustand'
 import { db } from '@/lib/db'
 import { enqueue, flushQueue } from '@/lib/sync/queue'
@@ -15,33 +17,29 @@ interface TopicsState {
 export const useTopicsStore = create<TopicsState>()((set) => ({
   topics: [],
   isLoaded: false,
-
   load: async () => {
     const topics = await db.topics.toArray()
     set({ topics, isLoaded: true })
   },
-
   add: async (topic) => {
     await db.topics.add(topic)
-    await enqueue('topics', 'INSERT', topic as never)
+    await enqueue('topics', 'INSERT', topic)
     if (navigator.onLine) await flushQueue()
-    set((s) => ({ topics: [...s.topics, topic] }))
+    set((state) => ({ topics: [...state.topics, topic] }))
   },
-
   update: async (id, patch) => {
     const updated = { ...patch, updated_at: new Date().toISOString() }
     await db.topics.update(id, updated)
-    await enqueue('topics', 'UPDATE', { id, ...updated } as never)
+    await enqueue('topics', 'UPDATE', { id, ...updated })
     if (navigator.onLine) await flushQueue()
-    set((s) => ({
-      topics: s.topics.map((t) => (t.id === id ? { ...t, ...updated } : t)),
+    set((state) => ({
+      topics: state.topics.map((topic) => (topic.id === id ? { ...topic, ...updated } : topic)),
     }))
   },
-
   remove: async (id) => {
     await db.topics.delete(id)
-    await enqueue('topics', 'DELETE', { id } as never)
+    await enqueue('topics', 'DELETE', { id })
     if (navigator.onLine) await flushQueue()
-    set((s) => ({ topics: s.topics.filter((t) => t.id !== id) }))
+    set((state) => ({ topics: state.topics.filter((topic) => topic.id !== id) }))
   },
 }))

@@ -11,7 +11,7 @@ const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin']
 export const metadata: Metadata = {
   title: 'Studify',
   description: 'Your personal study platform',
-  manifest: '/manifest.json',
+  manifest: '/manifest.webmanifest',
 }
 
 export default async function LocaleLayout({

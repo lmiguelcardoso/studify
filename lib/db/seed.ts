@@ -1,5 +1,5 @@
-import { createClient } from '@/lib/supabase/client'
 import { db } from '@/lib/db'
+import { createClient } from '@/lib/supabase/client'
 
 export async function seedLocalDB(userId: string) {
   const supabase = createClient()
