@@ -64,10 +64,18 @@
     "result": "Resultado",
     "accuracy": "Aproveitamento",
     "newQuestion": "Nova questão",
+    "editQuestion": "Editar",
+    "deleteQuestion": "Excluir",
+    "questionType": "Tipo de questão",
     "questionText": "Enunciado",
     "options": "Opções",
     "addOption": "Adicionar opção",
     "correctAnswer": "Resposta correta",
+    "validation": "Adicione de 2 a 6 opções e marque exatamente uma resposta correta.",
+    "noQuestions": "Nenhuma questão criada ainda",
+    "deleteTitle": "Excluir questão",
+    "deleteDescription": "Excluir esta questão: {text}",
+    "convertToFlashcard": "Converter em flashcard",
     "type": {
       "multiple_choice": "Múltipla escolha",
       "true_false": "Verdadeiro ou Falso"
