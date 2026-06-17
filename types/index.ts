@@ -108,7 +108,7 @@ export interface SyncQueueItem {
   id: string
   table: SyncTable
   operation: SyncOperation
-  payload: Record<string, unknown>
+  payload: object
   created_at: number // timestamp
   retries: number
 }

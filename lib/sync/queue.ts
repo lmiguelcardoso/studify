@@ -5,7 +5,7 @@ import type { SyncQueueItem, SyncTable } from '@/types'
 export async function enqueue(
   table: SyncTable,
   operation: SyncQueueItem['operation'],
-  payload: Record<string, unknown>
+  payload: object
 ) {
   await db.syncQueue.add({
     id: crypto.randomUUID(),
@@ -28,6 +28,10 @@ export async function flushQueue() {
       if (item.operation === 'INSERT' || item.operation === 'UPDATE') {
         await supabase.from(item.table).upsert(item.payload as never)
       } else if (item.operation === 'DELETE') {
+        if (!('id' in item.payload)) {
+          throw new Error(`Missing id for DELETE sync item ${item.id}`)
+        }
+
         await supabase.from(item.table).delete().eq('id', item.payload.id)
       }
       await db.syncQueue.delete(item.id)
