@@ -8,11 +8,19 @@ import type { Question } from '@/types'
 
 interface QuestionCardProps {
   question: Question
+  isConvertedToFlashcard: boolean
   onEdit: () => void
   onDelete: () => void
+  onConvertToFlashcard: () => Promise<void>
 }
 
-export function QuestionCard({ question, onEdit, onDelete }: QuestionCardProps) {
+export function QuestionCard({
+  question,
+  isConvertedToFlashcard,
+  onEdit,
+  onDelete,
+  onConvertToFlashcard,
+}: QuestionCardProps) {
   const t = useTranslations('quiz')
   const correctOption = question.options.find((option) => option.is_correct)
 
@@ -60,9 +68,17 @@ export function QuestionCard({ question, onEdit, onDelete }: QuestionCardProps) 
           <p className="rounded-md bg-muted p-3 text-sm text-muted-foreground">{question.explanation}</p>
         ) : null}
 
-        <Button type="button" variant="ghost" size="sm" disabled className="px-0">
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          disabled={isConvertedToFlashcard}
+          className="px-0"
+          title={isConvertedToFlashcard ? t('alreadyConverted') : undefined}
+          onClick={onConvertToFlashcard}
+        >
           <Layers className="h-4 w-4" aria-hidden="true" />
-          {t('convertToFlashcard')}
+          {isConvertedToFlashcard ? t('alreadyConverted') : t('convertToFlashcard')}
         </Button>
       </CardContent>
     </Card>
