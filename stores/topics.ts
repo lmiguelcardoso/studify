@@ -37,9 +37,34 @@ export const useTopicsStore = create<TopicsState>()((set) => ({
     }))
   },
   remove: async (id) => {
-    await db.topics.delete(id)
+    const topics = await db.topics.toArray()
+    const idsToDelete = new Set([id])
+    let changed = true
+
+    while (changed) {
+      changed = false
+      for (const topic of topics) {
+        if (topic.parent_id && idsToDelete.has(topic.parent_id) && !idsToDelete.has(topic.id)) {
+          idsToDelete.add(topic.id)
+          changed = true
+        }
+      }
+    }
+
+    const topicIds = [...idsToDelete]
+
+    await db.transaction(
+      'rw',
+      [db.topics, db.questions, db.flashcards, db.materials],
+      async () => {
+        await Promise.all(topicIds.map((topicId) => db.topics.delete(topicId)))
+        await db.questions.where('topic_id').anyOf(topicIds).delete()
+        await db.flashcards.where('topic_id').anyOf(topicIds).delete()
+        await db.materials.where('topic_id').anyOf(topicIds).delete()
+      }
+    )
     await enqueue('topics', 'DELETE', { id })
     if (navigator.onLine) await flushQueue()
-    set((state) => ({ topics: state.topics.filter((topic) => topic.id !== id) }))
+    set((state) => ({ topics: state.topics.filter((topic) => !idsToDelete.has(topic.id)) }))
   },
 }))

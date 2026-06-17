@@ -39,10 +39,19 @@
     "new": "Novo tópico",
     "name": "Nome",
     "description": "Descrição",
+    "descriptionText": "Organize seus materiais de estudo em tópicos e subtópicos.",
     "parent": "Tópico pai",
+    "noParent": "Sem tópico pai",
     "color": "Cor",
     "noTopics": "Nenhum tópico criado ainda",
-    "subtopics": "Subtópicos"
+    "subtopics": "Subtópicos",
+    "home": "Início",
+    "deleteTitle": "Excluir tópico",
+    "deleteDescription": "Excluir {name}? Isso também remove subtópicos, questões, flashcards e materiais vinculados.",
+    "questions": "Questões",
+    "flashcards": "Flashcards",
+    "materials": "Materiais",
+    "comingSoon": "Esta seção estará disponível em um próximo issue."
   },
   "quiz": {
     "title": "Quiz",
