@@ -1,0 +1,35 @@
+components/flashcards/FlashcardForm.tsx
+  s_3b7f428ef38d80::t_efe03c322fcc6d 1-89
+messages/en.json
+  s_3b7f428ef38d80::t_0b86b8f98ad4e1 80-81,97-98,107-109
+components/flashcards/DeleteFlashcardDialog.tsx
+  s_3b7f428ef38d80::t_efe03c322fcc6d 1-52
+components/topics/TopicDetailClient.tsx
+  s_3b7f428ef38d80::t_b94d71911b1e7e 9,182-183
+components/quiz/QuestionCard.tsx
+  s_3b7f428ef38d80::t_e064fcd8a86ff3 11,14,17-23,71-79,81
+components/quiz/QuestionsPanel.tsx
+  s_3b7f428ef38d80::t_e064fcd8a86ff3 10,12,29-33,37,41-42,89-115,128-133,153,156
+messages/pt-BR.json
+  s_3b7f428ef38d80::t_0b86b8f98ad4e1 80-81,97-98,107-109
+components/flashcards/FlashcardsPanel.tsx
+  s_3b7f428ef38d80::t_efe03c322fcc6d 1-131
+components/flashcards/FlashcardCard.tsx
+  s_3b7f428ef38d80::t_efe03c322fcc6d 1-56
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "07dfde382b37f89e0211595e6da8c6c994d4d33e",
+  "prompts": {},
+  "sessions": {
+    "s_3b7f428ef38d80": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ed2c6-fc6a-75b2-a665-a0d824c2b4f4",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Miguel <mi_lmc@hotmail.com>"
+    }
+  }
+}
