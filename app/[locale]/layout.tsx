@@ -2,12 +2,11 @@ import { NextIntlClientProvider } from 'next-intl'
 import type { ReactNode } from 'react'
 import enMessages from '@/messages/en.json'
 import ptBRMessages from '@/messages/pt-BR.json'
-import type { Locale } from '@/types'
 
 type LocaleLayoutProps = {
   children: ReactNode
   params: Promise<{
-    locale: Locale
+    locale: string
   }>
 }
 
