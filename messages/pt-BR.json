@@ -56,6 +56,7 @@
   "quiz": {
     "title": "Quiz",
     "start": "Iniciar quiz",
+    "selectTopic": "Escolha um tópico para iniciar uma sessão embaralhada.",
     "question": "Questão",
     "of": "de",
     "correct": "Correto!",
@@ -76,6 +77,9 @@
     "deleteTitle": "Excluir questão",
     "deleteDescription": "Excluir esta questão: {text}",
     "convertToFlashcard": "Converter em flashcard",
+    "reviewTopic": "Revisar tópico",
+    "tryAgain": "Tentar novamente",
+    "savingResult": "Salvando resultado...",
     "type": {
       "multiple_choice": "Múltipla escolha",
       "true_false": "Verdadeiro ou Falso"
