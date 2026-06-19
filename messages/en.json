@@ -106,9 +106,17 @@
   "materials": {
     "title": "Materials",
     "newMaterial": "New material",
+    "editMaterial": "Edit material",
+    "deleteMaterial": "Delete material",
+    "deleteMaterialDescription": "Delete \"{title}\"? This action cannot be undone.",
     "uploadPdf": "Upload PDF",
     "addVideoLink": "Add video link",
     "uploadVideo": "Upload video",
+    "view": "View",
+    "selectType": "Type",
+    "selectTopic": "Topic",
+    "url": "URL",
+    "uploadFile": "Select file",
     "type": {
       "pdf": "PDF",
       "video_link": "Video (link)",

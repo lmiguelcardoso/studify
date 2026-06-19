@@ -106,9 +106,17 @@
   "materials": {
     "title": "Materiais",
     "newMaterial": "Novo material",
+    "editMaterial": "Editar material",
+    "deleteMaterial": "Excluir material",
+    "deleteMaterialDescription": "Excluir \"{title}\"? Esta ação não pode ser desfeita.",
     "uploadPdf": "Enviar PDF",
     "addVideoLink": "Adicionar link de vídeo",
     "uploadVideo": "Enviar vídeo",
+    "view": "Ver",
+    "selectType": "Tipo",
+    "selectTopic": "Tópico",
+    "url": "URL",
+    "uploadFile": "Selecionar arquivo",
     "type": {
       "pdf": "PDF",
       "video_link": "Vídeo (link)",
