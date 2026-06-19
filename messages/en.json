@@ -80,6 +80,7 @@
     "front": "Front",
     "back": "Back",
     "newCard": "New flashcard",
+    "editCard": "Edit flashcard",
     "flip": "Flip",
     "pile": {
       "unknown": "Don't know",
@@ -88,7 +89,16 @@
     },
     "startReview": "Start review",
     "noCards": "No flashcards created yet",
-    "convertFromQuestion": "Convert question to flashcard"
+    "noCardsForTopic": "No flashcards for this topic",
+    "convertFromQuestion": "Convert question to flashcard",
+    "selectQuestion": "Select a question",
+    "reviewProgress": "Reviewing {current} of {total}",
+    "reviewComplete": "Review complete!",
+    "cardsReviewed": "Cards reviewed",
+    "confirmDelete": "Delete this flashcard?",
+    "allTopics": "All topics",
+    "topic": "Topic",
+    "topicsFilter": "Filter by topic"
   },
   "materials": {
     "title": "Materials",

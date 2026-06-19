@@ -80,6 +80,7 @@
     "front": "Frente",
     "back": "Verso",
     "newCard": "Novo flashcard",
+    "editCard": "Editar flashcard",
     "flip": "Virar",
     "pile": {
       "unknown": "Não sei",
@@ -88,7 +89,16 @@
     },
     "startReview": "Iniciar revisão",
     "noCards": "Nenhum flashcard criado ainda",
-    "convertFromQuestion": "Converter questão em flashcard"
+    "noCardsForTopic": "Nenhum flashcard para este tópico",
+    "convertFromQuestion": "Converter questão em flashcard",
+    "selectQuestion": "Selecione uma questão",
+    "reviewProgress": "Revisando {current} de {total}",
+    "reviewComplete": "Revisão concluída!",
+    "cardsReviewed": "Cartões revisados",
+    "confirmDelete": "Excluir este flashcard?",
+    "allTopics": "Todos os tópicos",
+    "topic": "Tópico",
+    "topicsFilter": "Filtrar por tópico"
   },
   "materials": {
     "title": "Materiais",
