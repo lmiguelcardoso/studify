@@ -22,45 +22,47 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
-      <div className="mx-auto flex h-14 max-w-screen-xl items-center justify-between px-4">
-        <div className="flex items-center gap-4 md:gap-6">
-          <button
-            className="flex items-center justify-center rounded-md p-2 text-muted-foreground hover:bg-muted md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Open menu"
-          >
-            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
+    <>
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
+        <div className="mx-auto flex h-14 max-w-screen-xl items-center justify-between px-4">
+          <div className="flex items-center gap-4 md:gap-6">
+            <button
+              className="flex items-center justify-center rounded-md p-2 text-muted-foreground hover:bg-muted md:hidden"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Open menu"
+            >
+              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
 
-          <Link href="/dashboard" className="flex items-center gap-2 font-bold text-primary">
-            <BookOpen className="h-5 w-5" />
-            <span className="hidden sm:inline-block">Studify</span>
-          </Link>
+            <Link href="/dashboard" className="flex items-center gap-2 font-bold text-primary">
+              <BookOpen className="h-5 w-5" />
+              <span className="hidden sm:inline-block">Studify</span>
+            </Link>
 
-          <nav className="hidden md:flex items-center gap-1">
-            {NAV_LINKS.map(({ href, labelKey, icon: Icon }) => (
-              <Link
-                key={href}
-                href={href}
-                className="flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-              >
-                <Icon className="h-4 w-4" />
-                {t(labelKey as any)}
-              </Link>
-            ))}
-          </nav>
+            <nav className="hidden md:flex items-center gap-1">
+              {NAV_LINKS.map(({ href, labelKey, icon: Icon }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                >
+                  <Icon className="h-4 w-4" />
+                  {t(labelKey as any)}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          <div className="flex items-center gap-1">
+            <LanguageToggle />
+            <LogoutButton />
+          </div>
         </div>
-
-        <div className="flex items-center gap-1">
-          <LanguageToggle />
-          <LogoutButton />
-        </div>
-      </div>
+      </header>
 
       {/* Mobile Drawer Backdrop */}
       {isOpen && (
-        <div 
+        <div
           className="fixed inset-0 z-40 bg-background/80 backdrop-blur-sm md:hidden animate-in fade-in duration-200"
           onClick={() => setIsOpen(false)}
         />
@@ -107,6 +109,6 @@ export function Navbar() {
           <LogoutButton />
         </div>
       </div>
-    </header>
+    </>
   )
 }
