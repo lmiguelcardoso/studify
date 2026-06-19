@@ -73,7 +73,20 @@
       "true_false": "Verdadeiro ou Falso"
     },
     "true": "Verdadeiro",
-    "false": "Falso"
+    "false": "Falso",
+    "selectTopic": "Selecione um tópico para começar",
+    "selectATopic": "Selecionar um tópico",
+    "questionsCount": "{count} questões",
+    "quizCompleted": "Quiz concluído!",
+    "yourScore": "Sua pontuação",
+    "correctAnswers": "{correct} de {total} corretas",
+    "startNewQuiz": "Iniciar novo quiz",
+    "noTopicsWithQuestions": "Nenhum tópico com questões disponível",
+    "nextQuestion": "Próxima questão",
+    "answer": "Responder",
+    "answered": "Respondida",
+    "youAnswered": "Você respondeu:",
+    "questionProgress": "Questão {current} de {total}"
   },
   "flashcards": {
     "title": "Flashcards",
