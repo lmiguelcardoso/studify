@@ -73,7 +73,10 @@
       "true_false": "True or False"
     },
     "true": "True",
-    "false": "False"
+    "false": "False",
+    "noQuestions": "No questions for this topic yet",
+    "deleteQuestion": "Delete question",
+    "deleteQuestionDescription": "Delete \"{text}\"? This action cannot be undone."
   },
   "flashcards": {
     "title": "Flashcards",
