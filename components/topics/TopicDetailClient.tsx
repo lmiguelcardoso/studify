@@ -11,9 +11,13 @@ import { DeleteQuestionDialog } from '@/components/questions/DeleteQuestionDialo
 import { DeleteTopicDialog } from '@/components/topics/DeleteTopicDialog'
 import { TopicForm } from '@/components/topics/TopicForm'
 import { TopicTree } from '@/components/topics/TopicTree'
+import { MaterialCard } from '@/components/materials/MaterialCard'
+import { MaterialForm } from '@/components/materials/MaterialForm'
+import { DeleteMaterialDialog } from '@/components/materials/DeleteMaterialDialog'
 import { useTopicsStore } from '@/stores/topics'
 import { useQuestionsStore } from '@/stores/questions'
-import type { Question } from '@/types'
+import { useMaterialsStore } from '@/stores/materials'
+import type { Material, Question } from '@/types'
 
 interface TopicDetailClientProps {
   topicId: string
@@ -25,6 +29,7 @@ const tabs = ['subtopics', 'questions', 'flashcards', 'materials'] as const
 export function TopicDetailClient({ topicId, userId }: TopicDetailClientProps) {
   const t = useTranslations('topics')
   const quiz = useTranslations('quiz')
+  const mat = useTranslations('materials')
   const common = useTranslations('common')
   const router = useRouter()
   const { topics, isLoaded, load, add, update, remove } = useTopicsStore()
@@ -38,6 +43,15 @@ export function TopicDetailClient({ topicId, userId }: TopicDetailClientProps) {
     remove: removeQuestion,
   } = useQuestionsStore()
 
+  const {
+    materials,
+    isLoaded: materialsLoaded,
+    loadByTopic: loadMaterialsByTopic,
+    add: addMaterial,
+    update: updateMaterial,
+    remove: removeMaterial,
+  } = useMaterialsStore()
+
   const [isEditing, setIsEditing] = useState(false)
   const [isCreatingSubtopic, setIsCreatingSubtopic] = useState(false)
   const [isDeleting, setIsDeleting] = useState(false)
@@ -45,6 +59,9 @@ export function TopicDetailClient({ topicId, userId }: TopicDetailClientProps) {
   const [isCreatingQuestion, setIsCreatingQuestion] = useState(false)
   const [editingQuestion, setEditingQuestion] = useState<Question | null>(null)
   const [deletingQuestion, setDeletingQuestion] = useState<Question | null>(null)
+  const [isCreatingMaterial, setIsCreatingMaterial] = useState(false)
+  const [editingMaterial, setEditingMaterial] = useState<Material | null>(null)
+  const [deletingMaterial, setDeletingMaterial] = useState<Material | null>(null)
 
   useEffect(() => {
     load()
@@ -55,6 +72,12 @@ export function TopicDetailClient({ topicId, userId }: TopicDetailClientProps) {
       loadByTopic(topicId)
     }
   }, [activeTab, topicId, questionsLoaded, loadByTopic])
+
+  useEffect(() => {
+    if (activeTab === 'materials' && !materialsLoaded) {
+      loadMaterialsByTopic(topicId)
+    }
+  }, [activeTab, topicId, materialsLoaded, loadMaterialsByTopic])
 
   const topic = topics.find((candidate) => candidate.id === topicId)
   const parent = topic?.parent_id ? topics.find((candidate) => candidate.id === topic.parent_id) : null
@@ -131,6 +154,17 @@ export function TopicDetailClient({ topicId, userId }: TopicDetailClientProps) {
     () => questions.filter((candidate) => candidate.topic_id === topicId).sort((a, b) => a.created_at.localeCompare(b.created_at)),
     [questions, topicId]
   )
+
+  const topicMaterials = useMemo(
+    () => materials.filter((candidate) => candidate.topic_id === topicId).sort((a, b) => a.title.localeCompare(b.title)),
+    [materials, topicId]
+  )
+
+  async function handleDeleteMaterial() {
+    if (!deletingMaterial) return
+    await removeMaterial(deletingMaterial.id)
+    setDeletingMaterial(null)
+  }
 
   if (!topic && isLoaded) {
     return (
@@ -284,6 +318,65 @@ export function TopicDetailClient({ topicId, userId }: TopicDetailClientProps) {
             </div>
           )}
         </section>
+      ) : activeTab === 'materials' ? (
+        <section className="space-y-4">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <h2 className="text-lg font-semibold">{t('materials')}</h2>
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => {
+                setIsCreatingMaterial((value) => !value)
+                setEditingMaterial(null)
+              }}
+            >
+              <Plus className="h-4 w-4" aria-hidden="true" />
+              {mat('newMaterial')}
+            </Button>
+          </div>
+
+          {isCreatingMaterial ? (
+            <MaterialForm
+              userId={userId}
+              topics={topics}
+              topicId={topicId}
+              onSubmit={() => setIsCreatingMaterial(false)}
+              onCancel={() => setIsCreatingMaterial(false)}
+            />
+          ) : null}
+
+          {editingMaterial ? (
+            <MaterialForm
+              userId={userId}
+              topics={topics}
+              material={editingMaterial}
+              topicId={topicId}
+              onSubmit={() => setEditingMaterial(null)}
+              onCancel={() => setEditingMaterial(null)}
+            />
+          ) : null}
+
+          {!materialsLoaded ? (
+            <div className="rounded-md border border-dashed p-8 text-center text-sm text-muted-foreground">
+              {common('loading')}
+            </div>
+          ) : topicMaterials.length === 0 && !isCreatingMaterial ? (
+            <div className="rounded-md border border-dashed p-8 text-center text-sm text-muted-foreground">
+              {mat('noMaterials')}
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {topicMaterials.map((material) => (
+                <MaterialCard
+                  key={material.id}
+                  material={material}
+                  onEdit={setEditingMaterial}
+                  onDelete={setDeletingMaterial}
+                />
+              ))}
+            </div>
+          )}
+        </section>
       ) : (
         <div className="rounded-md border border-dashed p-8 text-center text-sm text-muted-foreground">
           {t('comingSoon')}
@@ -302,6 +395,13 @@ export function TopicDetailClient({ topicId, userId }: TopicDetailClientProps) {
         isOpen={deletingQuestion !== null}
         onCancel={() => setDeletingQuestion(null)}
         onConfirm={handleDeleteQuestion}
+      />
+
+      <DeleteMaterialDialog
+        material={deletingMaterial!}
+        isOpen={deletingMaterial !== null}
+        onCancel={() => setDeletingMaterial(null)}
+        onConfirm={handleDeleteMaterial}
       />
     </div>
   )
