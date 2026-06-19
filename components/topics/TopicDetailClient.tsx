@@ -5,10 +5,15 @@ import { Edit2, Plus, Trash2 } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Link, useRouter } from '@/i18n/navigation'
 import { Button } from '@/components/ui/button'
+import { QuestionCard } from '@/components/questions/QuestionCard'
+import { QuestionForm } from '@/components/questions/QuestionForm'
+import { DeleteQuestionDialog } from '@/components/questions/DeleteQuestionDialog'
 import { DeleteTopicDialog } from '@/components/topics/DeleteTopicDialog'
 import { TopicForm } from '@/components/topics/TopicForm'
 import { TopicTree } from '@/components/topics/TopicTree'
 import { useTopicsStore } from '@/stores/topics'
+import { useQuestionsStore } from '@/stores/questions'
+import type { Question } from '@/types'
 
 interface TopicDetailClientProps {
   topicId: string
@@ -19,17 +24,37 @@ const tabs = ['subtopics', 'questions', 'flashcards', 'materials'] as const
 
 export function TopicDetailClient({ topicId, userId }: TopicDetailClientProps) {
   const t = useTranslations('topics')
+  const quiz = useTranslations('quiz')
   const common = useTranslations('common')
   const router = useRouter()
   const { topics, isLoaded, load, add, update, remove } = useTopicsStore()
+
+  const {
+    questions,
+    isLoaded: questionsLoaded,
+    loadByTopic,
+    add: addQuestion,
+    update: updateQuestion,
+    remove: removeQuestion,
+  } = useQuestionsStore()
+
   const [isEditing, setIsEditing] = useState(false)
   const [isCreatingSubtopic, setIsCreatingSubtopic] = useState(false)
   const [isDeleting, setIsDeleting] = useState(false)
   const [activeTab, setActiveTab] = useState<(typeof tabs)[number]>('subtopics')
+  const [isCreatingQuestion, setIsCreatingQuestion] = useState(false)
+  const [editingQuestion, setEditingQuestion] = useState<Question | null>(null)
+  const [deletingQuestion, setDeletingQuestion] = useState<Question | null>(null)
 
   useEffect(() => {
     load()
   }, [load])
+
+  useEffect(() => {
+    if (activeTab === 'questions' && !questionsLoaded) {
+      loadByTopic(topicId)
+    }
+  }, [activeTab, topicId, questionsLoaded, loadByTopic])
 
   const topic = topics.find((candidate) => candidate.id === topicId)
   const parent = topic?.parent_id ? topics.find((candidate) => candidate.id === topic.parent_id) : null
@@ -68,6 +93,44 @@ export function TopicDetailClient({ topicId, userId }: TopicDetailClientProps) {
     setIsDeleting(false)
     router.push('/topics')
   }
+
+  async function handleCreateQuestion(values: { text: string; type: Question['type']; options: Question['options']; explanation: string }) {
+    const now = new Date().toISOString()
+    await addQuestion({
+      id: crypto.randomUUID(),
+      user_id: userId,
+      topic_id: topicId,
+      type: values.type,
+      text: values.text,
+      explanation: values.explanation || null,
+      options: values.options,
+      created_at: now,
+      updated_at: now,
+    })
+    setIsCreatingQuestion(false)
+  }
+
+  async function handleUpdateQuestion(values: { text: string; type: Question['type']; options: Question['options']; explanation: string }) {
+    if (!editingQuestion) return
+    await updateQuestion(editingQuestion.id, {
+      type: values.type,
+      text: values.text,
+      explanation: values.explanation || null,
+      options: values.options,
+    })
+    setEditingQuestion(null)
+  }
+
+  async function handleDeleteQuestion() {
+    if (!deletingQuestion) return
+    await removeQuestion(deletingQuestion.id)
+    setDeletingQuestion(null)
+  }
+
+  const topicQuestions = useMemo(
+    () => questions.filter((candidate) => candidate.topic_id === topicId).sort((a, b) => a.created_at.localeCompare(b.created_at)),
+    [questions, topicId]
+  )
 
   if (!topic && isLoaded) {
     return (
@@ -175,6 +238,52 @@ export function TopicDetailClient({ topicId, userId }: TopicDetailClientProps) {
             </div>
           )}
         </section>
+      ) : activeTab === 'questions' ? (
+        <section className="space-y-4">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <h2 className="text-lg font-semibold">{t('questions')}</h2>
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => {
+                setIsCreatingQuestion((value) => !value)
+                setEditingQuestion(null)
+              }}
+            >
+              <Plus className="h-4 w-4" aria-hidden="true" />
+              {quiz('newQuestion')}
+            </Button>
+          </div>
+
+          {isCreatingQuestion ? (
+            <QuestionForm onSubmit={handleCreateQuestion} onCancel={() => setIsCreatingQuestion(false)} />
+          ) : null}
+
+          {editingQuestion ? (
+            <QuestionForm question={editingQuestion} onSubmit={handleUpdateQuestion} onCancel={() => setEditingQuestion(null)} />
+          ) : null}
+
+          {!questionsLoaded ? (
+            <div className="rounded-md border border-dashed p-8 text-center text-sm text-muted-foreground">
+              {common('loading')}
+            </div>
+          ) : topicQuestions.length === 0 && !isCreatingQuestion ? (
+            <div className="rounded-md border border-dashed p-8 text-center text-sm text-muted-foreground">
+              {quiz('noQuestions')}
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {topicQuestions.map((question) => (
+                <QuestionCard
+                  key={question.id}
+                  question={question}
+                  onEdit={setEditingQuestion}
+                  onDelete={setDeletingQuestion}
+                />
+              ))}
+            </div>
+          )}
+        </section>
       ) : (
         <div className="rounded-md border border-dashed p-8 text-center text-sm text-muted-foreground">
           {t('comingSoon')}
@@ -186,6 +295,13 @@ export function TopicDetailClient({ topicId, userId }: TopicDetailClientProps) {
         isOpen={isDeleting}
         onCancel={() => setIsDeleting(false)}
         onConfirm={handleDelete}
+      />
+
+      <DeleteQuestionDialog
+        question={deletingQuestion!}
+        isOpen={deletingQuestion !== null}
+        onCancel={() => setDeletingQuestion(null)}
+        onConfirm={handleDeleteQuestion}
       />
     </div>
   )

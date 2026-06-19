@@ -73,7 +73,10 @@
       "true_false": "Verdadeiro ou Falso"
     },
     "true": "Verdadeiro",
-    "false": "Falso"
+    "false": "Falso",
+    "noQuestions": "Nenhuma questão para este tópico ainda",
+    "deleteQuestion": "Excluir questão",
+    "deleteQuestionDescription": "Excluir \"{text}\"? Esta ação não pode ser desfeita."
   },
   "flashcards": {
     "title": "Flashcards",
